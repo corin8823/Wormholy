@@ -23,11 +23,10 @@ public class Wormholy: NSObject
         }
     }
     
-    static func enable(_ enable: Bool){
-        if enable{
+    public static func enable(_ enable: Bool) {
+        if enable {
             URLProtocol.registerClass(CustomHTTPProtocol.self)
-        }
-        else{
+        } else {
             URLProtocol.unregisterClass(CustomHTTPProtocol.self)
         }
     }
